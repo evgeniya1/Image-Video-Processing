@@ -13,7 +13,7 @@ def resize(image_path, resize_percentage, resized_path):
   width = int(image.shape[1] * resize_percentage)
   height = int(image.shape[0] * resize_percentage)
   resized_image = cv2.resize(image, (width, height))
-  cv2.imwrite(image_path + '_resized', resized_image)
+  cv2.imwrite(resized_path, resized_image)
 
 
 resize(image_path='galaxy.jpeg',
