@@ -13,11 +13,12 @@ IMAGES_FOLDER = 'images_to_collage'
 images = os.listdir(IMAGES_FOLDER)
 
 shape = cv2.imread(IMAGES_FOLDER + '/' + images[0]).shape
-print(images,shape)
+print(images)
+print(shape)
 
 big_image = np.zeros((shape[0]*rows + vertical_margin*(rows + 1), 
-                     shape[1]*columns + horizontal_margin*(columns + 1), 
-                     shape[2]), np.uint8)
+                      shape[1]*columns + horizontal_margin*(columns + 1), 
+                      shape[2]), np.uint8)
 
 big_image.fill(255)
 
